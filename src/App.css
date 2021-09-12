@@ -52,7 +52,3 @@ div h2 span::after {
 div h2 span:hover::after {
     width: 100%;
 }
-
-div p {
-    text-align: justify;
-} 
