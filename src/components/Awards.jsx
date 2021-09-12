@@ -10,23 +10,17 @@ export default class Awards extends React.Component {
 			"Lorem ipsum dolor sit amet"
 		]
 		return(
-			<div className="container mx-auto my-auto">
-				<div className="row">
-					<div className="col-8 offset-2">
-					  <h2 className="mb-3">
-					  	<span className="fw-bold">Awards</span>
-				  	</h2>
-					</div>
+			<div className="m-auto w-screen">
+				<div className="my-5 w-1/2 m-auto">
+					<span className="text-4xl font-bold after:content-[''] after:block after:w-0 after:h-1 after:bg-black after:transition-width after:duration-200 hover:after:w-60">Awards</span>
 				</div>
-				<div className="row">
-					<div className="col-8 offset-2 lh-1">
+				<div className="w-1/2 m-auto">
 					  { awards.map((award, index) => 
-					  	<p key={index}>
+					  	<div key={index} className="text-xl">
 					  		<FontAwesomeIcon icon={faAward}/>
 					  		<span className="fs-5 p-2">{award}</span>
-					  	</p>
+					  	</div>
 					  )}
-					</div>
 				</div>
 			</div>
 		)

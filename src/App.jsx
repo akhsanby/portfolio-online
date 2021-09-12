@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // components
 import { 
@@ -24,12 +24,12 @@ export default class App extends React.Component {
     ]
 
     return (
-      <div className="App">
+      <div className="flex w-screen h-screen">
         <Navbar />
         
         <Switch>
           {routes.map((route, index) => 
-            <Route path={route.path} component={route.component}></Route>
+            <Route key={index} path={route.path} component={route.component}></Route>
           )}
         </Switch>
       </div>

@@ -27,35 +27,27 @@ export default class Skills extends React.Component {
 			{ name: "VueJS", icon: faVuejs }
 		]
 		return(
-			<div className="container mx-auto my-auto">
-				<div className="row">
-					<div className="col-8 offset-2">
-					  <h2 className="mb-3">
-					  	<span className="fw-bold">Expertise & Skills</span>
-				  	</h2>
-					</div>
+			<div className="m-auto w-screen">
+				<div className="my-5 w-1/2 m-auto">
+					<span className="text-4xl font-bold after:content-[''] after:block after:w-0 after:h-1 after:bg-black after:transition-width after:duration-200 hover:after:w-60">Skills</span>
 				</div>
-				<div className="row">
-					<div className="col-4 offset-2">
-						<ul className="list-group list-group-flush">
-						  {skills.slice(0, 5).map((skill, index) => 
-						  	<li key={index} className="list-group-item">
-						  		<FontAwesomeIcon icon={skill.icon} />
-						  		<span className="p-2">{skill.name}</span>
-						  	</li>
-						  )}
-					  </ul>
-					</div>
-					<div className="col-4">
-						<ul className="list-group list-group-flush">
-						  {skills.slice(5, 10).map((skill, index) => 
-					  		<li key={index} className="list-group-item">
-					  			<FontAwesomeIcon icon={skill.icon} />
-						  		<span className="p-2">{skill.name}</span>
-					  		</li>
-					  	)}
-						</ul>
-					</div>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-1 w-1/2 m-auto">
+					<ul>
+						{skills.slice(0, 5).map((skill, index) => 
+					  	<li key={index} className="text-xl">
+					  		<FontAwesomeIcon icon={skill.icon} />
+					  		<span className="p-2">{skill.name}</span>
+					  	</li>
+					  )}
+					</ul>
+					<ul>
+						{skills.slice(5, 10).map((skill, index) => 
+				  		<li key={index} className="text-xl">
+				  			<FontAwesomeIcon icon={skill.icon} />
+					  		<span className="p-2">{skill.name}</span>
+				  		</li>
+				  	)}
+					</ul>
 				</div>
 			</div>
 		)
